@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/UI/button';
 import { useAuth } from '@/contexts/AuthContext';
 import logo from '/white_logo.png'
 

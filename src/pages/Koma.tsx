@@ -8,7 +8,7 @@ import Sidebar from '@/components/Layout/Sidebar';
 import MangaGrid from '@/components/Chat/MangaGrid';
 import PromptInput from '@/components/Chat/PromptInput';
 import { useToast } from '@/hooks/use-toast';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/UI/button';
 
 const Koma: React.FC = () => {
   const [currentSection, setCurrentSection] = useState('explore');

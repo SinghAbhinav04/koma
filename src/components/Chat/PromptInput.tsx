@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Loader2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/UI/button';
+import { Textarea } from '@/components/UI/textarea';
 
 interface PromptInputProps {
   onSubmit: (prompt: string) => void;

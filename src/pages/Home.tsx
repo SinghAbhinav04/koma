@@ -5,7 +5,7 @@ import { Palette, Zap, Shield, Clock } from 'lucide-react';
 import Header from '@/components/Layout/Header';
 import MacWindow from '@/components/Layout/MacWindow';
 import FeatureCard from '@/components/UI/FeatureCard';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/UI/button';
 import { useAuth } from '@/contexts/AuthContext';
 import logo from '/white_logo.png';
 
