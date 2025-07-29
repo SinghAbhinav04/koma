@@ -1,0 +1,259 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Koma Design System - Professional Dark Theme */
+
+@layer base {
+  :root {
+    /* Koma Dark Theme Colors */
+    --background: 0 0% 4%; /* #0a0a0a */
+    --foreground: 0 0% 100%; /* #ffffff */
+    
+    --card: 0 0% 10%; /* #1a1a1a */
+    --card-foreground: 0 0% 100%;
+    
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 100%;
+    
+    /* Professional Button Colors - White/Light shades for dark backgrounds */
+    --primary: 0 0% 100%; /* Pure white for primary buttons */
+    --primary-foreground: 0 0% 4%; /* Dark text on white buttons */
+    
+    --secondary: 0 0% 90%; /* Light gray for secondary buttons */
+    --secondary-foreground: 0 0% 20%; /* Dark gray text on light buttons */
+    
+    --muted: 0 0% 16%;
+    --muted-foreground: 0 0% 64%; /* #a3a3a3 */
+    
+    --accent: 0 0% 85%; /* Light gray for accents */
+    --accent-foreground: 0 0% 20%; /* Dark text on light accents */
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 25%; /* #404040 */
+    --input: 0 0% 16%;
+    --ring: 0 0% 70%; /* Light gray focus ring */
+    
+    --radius: 0.75rem;
+    
+    /* Mac Window Colors */
+    --mac-red: 0 100% 67%; /* #ff5f57 */
+    --mac-yellow: 45 100% 59%; /* #ffbd2e */
+    --mac-green: 142 71% 45%; /* #28ca42 */
+    
+    /* Professional Accent Colors */
+    --blue-accent: 217 91% 60%; /* #3b82f6 */
+    --orange-accent: 24 95% 53%; /* #f97316 */
+    --green-accent: 158 64% 52%; /* #10b981 */
+    --purple-accent: 262 83% 58%; /* #8b5cf6 */
+    
+    /* Subtle Feature Card Gradients */
+    --gradient-blue: linear-gradient(135deg, hsl(217 91% 60% / 0.05), hsl(217 91% 60% / 0.15));
+    --gradient-orange: linear-gradient(135deg, hsl(24 95% 53% / 0.05), hsl(24 95% 53% / 0.15));
+    --gradient-green: linear-gradient(135deg, hsl(158 64% 52% / 0.05), hsl(158 64% 52% / 0.15));
+    --gradient-purple: linear-gradient(135deg, hsl(262 83% 58% / 0.05), hsl(262 83% 58% / 0.15));
+    
+    /* Professional Heading Colors */
+    --heading-gradient: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 85%));
+    --heading-primary: 0 0% 100%; /* White for main headings */
+    
+    /* Professional Animation Variables */
+    --animation-slide-up: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-fade-in: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-scale-subtle: scaleSubtle 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Professional Window Shadow */
+    --professional-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    
+    /* Smooth Professional Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-button: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-card: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Professional Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleSubtle {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: hsl(var(--border));
+  }
+  50% {
+    border-color: hsl(var(--primary) / 0.5);
+  }
+}
+
+/* Professional Animation Classes */
+.animate-fade-in {
+  animation: var(--animation-fade-in);
+}
+
+.animate-slide-up {
+  animation: var(--animation-slide-up);
+}
+
+.animate-slide-down {
+  animation: slideDown 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-slide-left {
+  animation: slideLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-slide-right {
+  animation: slideRight 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-scale-subtle {
+  animation: var(--animation-scale-subtle);
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-border-glow {
+  animation: borderGlow 2s ease-in-out infinite;
+}
+
+/* Professional Button Styles */
+.btn-primary {
+  @apply bg-primary text-primary-foreground;
+  @apply hover:bg-primary/90 active:bg-primary/80;
+  @apply transition-all duration-200 ease-out;
+  @apply shadow-sm hover:shadow-md;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-secondary-foreground;
+  @apply hover:bg-secondary/90 active:bg-secondary/80;
+  @apply transition-all duration-200 ease-out;
+  @apply shadow-sm hover:shadow-md;
+}
+
+.btn-outline {
+  @apply border border-primary/20 text-foreground bg-transparent;
+  @apply hover:bg-primary/10 hover:border-primary/30;
+  @apply active:bg-primary/20;
+  @apply transition-all duration-200 ease-out;
+}
+
+/* Professional Card Styles */
+.card-professional {
+  @apply bg-card border border-border/50;
+  @apply hover:border-border hover:shadow-lg;
+  @apply transition-all duration-300 ease-out;
+  @apply backdrop-blur-sm;
+}
+
+/* Professional Focus States */
+.focus-professional {
+  @apply focus:outline-none focus:ring-2 focus:ring-ring/50 focus:ring-offset-2 focus:ring-offset-background;
+}
+
+/* Stagger Animation Delays for Lists */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+
+/* Professional Hover Effects */
+.hover-lift {
+  @apply transition-transform duration-200 ease-out;
+  @apply hover:-translate-y-1 hover:shadow-lg;
+}
+
+.hover-scale {
+  @apply transition-transform duration-200 ease-out;
+  @apply hover:scale-105;
+}
+
+.hover-glow {
+  @apply transition-shadow duration-300 ease-out;
+  @apply hover:shadow-[0_0_20px_hsl(var(--primary)/0.3)];
+}
